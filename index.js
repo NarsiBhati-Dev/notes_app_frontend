@@ -21,8 +21,6 @@ const addNote = (event) => {
 
   Notes.push(newNote);
 
-  saveNoteToLocalStorage(newNote);
-
   addNoteToUI(newNote);
 
   noteTitleInput.value = "";
@@ -38,6 +36,12 @@ const addNoteToUI = (note) => {
   noteCard.innerHTML = `
     <h3>${note.title}</h3>
     <p>${note.content}</p>
+    <div class="note-footer">
+      <span>${note.date}</span>
+      <button class="delete-btn">
+        <i class="fa-solid fa-trash">delete</i>
+      </button>
+    </div>
   `;
 
   notesList.prepend(noteCard);
@@ -47,8 +51,4 @@ const addNoteToUI = (note) => {
   }
 };
 
-const saveNoteToLocalStorage = (note) => {
-  const notes = JSON.parse(localStorage.getItem("notes")) || [];
-  notes.unshift(note);
-  localStorage.setItem("notes", JSON.stringify(notes));
-};
+const renderNotesFromBackend = () => {};

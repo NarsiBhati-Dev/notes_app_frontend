@@ -3,18 +3,22 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Inter", "Segoe UI", Roboto, sans-serif;
-  background-color: #f4f6f8;
-  color: #1a1a1a;
+  background-color: #0f0f11;
+  color: #f4f6f8;
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 32px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  border-bottom: 1px solid #e5e7eb;
+  background-color: #1a1a1d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #2e2e33;
 }
 
 header h1 {
@@ -32,23 +36,30 @@ header a {
   font-size: 1rem;
 }
 
+header a:hover {
+  color: #7b61ff;
+  text-decoration: underline;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 32px;
   padding: 32px;
-  margin: 0 auto;
+  margin: 80px auto 0;
 }
 
 section {
-  background-color: #fff;
+  background-color: #1a1a1d;
   padding: 24px;
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   flex: 1 1 480px;
   min-height: 70vh;
   max-width: 100%;
+  overflow: hidden;
+  border: 1px solid #2e2e33;
 }
 
 #add-note-form {
@@ -59,6 +70,7 @@ section {
 
 #add-note-form label {
   font-weight: 600;
+  color: #7b61ff;
   margin-bottom: 4px;
 }
 
@@ -116,30 +128,38 @@ button:hover {
 }
 
 .note-card {
-  background: #f4f6f8;
+  background-color: #ffffff;
+  color: #0f0f11;
   border-radius: 12px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
   padding: 18px 16px;
   flex: 1 1 100%;
-  /* max-width: 48%; */
   list-style: none;
   transition: box-shadow 0.2s;
+  border: 1px solid #2e2e33;
 }
 
 .note-card:hover {
-  box-shadow: 0 4px 16px rgba(123, 97, 255, 0.1);
+  box-shadow: 0 4px 16px rgba(123, 97, 255, 0.09);
 }
 
 .note-card h3 {
   margin: 0 0 8px 0;
   font-size: 1.1rem;
-  color: #1a1a1a;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: justify;
+  color: #a78bfa;
 }
 
 .note-card p {
   margin: 0;
-  color: #444;
   font-size: 0.98rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: justify;
 }
 
 .see-all-notes {

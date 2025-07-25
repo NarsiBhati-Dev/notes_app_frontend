@@ -3,8 +3,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Inter", "Segoe UI", Roboto, sans-serif;
-  background-color: #f4f6f8;
-  color: #1a1a1a;
+  background-color: #0f0f11;
+  color: #f4f6f8;
 }
 
 header {
@@ -12,16 +12,16 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 32px;
-  background-color: #ffffff;
+  background-color: #1a1a1d;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #2e2e33;
 }
 
 header h1 {
   margin: 0;
-  color: #7b61ff;
   font-size: 2rem;
   font-weight: 700;
+  color: #7b61ff;
   letter-spacing: -1px;
 }
 
@@ -30,6 +30,11 @@ header a {
   color: #7b61ff;
   font-weight: 600;
   font-size: 1rem;
+}
+
+header a:hover {
+  color: #7b61ff;
+  text-decoration: underline;
 }
 
 main {
@@ -55,6 +60,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.2s;
+  border: 1px solid #2e2e33;
 }
 
 #notes-list li:hover {
@@ -64,6 +70,9 @@ main {
 .note-card h2 {
   margin: 0 0 8px;
   font-size: 1.25rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
   color: #333;
 }
 
@@ -71,6 +80,9 @@ main {
   margin: 0 0 12px;
   font-size: 1rem;
   color: #555;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .note-footer {

@@ -14,10 +14,7 @@ const renderNotes = () => {
     },
   ];
 
-  // show only last 5 notes
-  const recentNotes = notes.slice(-5).reverse(); // get last 5 in reverse order (newest first)
-
-  recentNotes.forEach((note) => {
+  notes.map((note) => {
     const li = document.createElement("li");
     const noteCard = document.createElement("div");
     noteCard.classList.add("note-card");
@@ -39,3 +36,22 @@ const renderNotes = () => {
 };
 
 document.addEventListener("DOMContentLoaded", renderNotes);
+
+// async function fetchNotes() {
+//   try {
+//     const response = await axios.get("/api/notes");
+//     console.log("Fetched notes:", response.data);
+//   } catch (error) {
+//     console.error("Fetch failed:", error);
+//   }
+// }
+
+// // Async function to post a new note
+// async function addNote(note) {
+//   try {
+//     const response = await axios.post("/api/notes", note);
+//     console.log("Note added:", response.data);
+//   } catch (error) {
+//     console.error("Post failed:", error);
+//   }
+// }
